@@ -1,0 +1,7 @@
+[user]
+	email = jonas.hungershausen@vogella.com
+	name = Jonas Hungershausen
+[core]
+	excludesfile = ~/.config/git/.gitignore
+[pull]
+	rebase = true

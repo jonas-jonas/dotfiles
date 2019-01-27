@@ -1,0 +1,42 @@
+{
+    "list": [
+        {
+            "list": [
+                {
+                    "command": "",
+                    "host": "learn.vogella.com",
+                    "name": "Build\/Learn",
+                    "params": "",
+                    "port": 44328,
+                    "protocolType": "SSH",
+                    "type": "REMOTE",
+                    "user": ""
+                },
+                {
+                    "command": "",
+                    "host": "bertrax.vogella.com",
+                    "name": "Bertrax",
+                    "params": "",
+                    "port": 44328,
+                    "protocolType": "SSH",
+                    "type": "REMOTE",
+                    "user": ""
+                },
+                {
+                    "command": "",
+                    "host": "tasks.vogella.com",
+                    "name": "Tasks",
+                    "params": "",
+                    "port": 44328,
+                    "protocolType": "SSH",
+                    "type": "REMOTE",
+                    "user": ""
+                }
+            ],
+            "name": "Connections",
+            "type": "FOLDER"
+        }
+    ],
+    "name": "Root",
+    "type": "FOLDER"
+}

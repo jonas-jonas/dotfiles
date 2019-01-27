@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Enable google chrome repo
+sudo dnf install fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+
+#Enable VSCode repo
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
+# Refresh dnf cache
+sudo dnf check-update
+
+# Install apps
+sudo dnf install -y git zsh google-chrome-stable code tilix
+
+# Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Sdk!man
+curl -s "https://get.sdkman.io" | bash
+
+# Enable flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install flatpak apps
+flatpak install flathub com.slack.Slack
+flatpak install flathub com.spotify.Client
+flatpak install flathub org.telegram.desktop
+flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub com.discordapp.Discord
+
+# Install Java
+#sdk install java
