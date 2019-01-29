@@ -15,7 +15,7 @@ curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo dnf check-update
 
 # Install apps
-sudo dnf install -y git zsh google-chrome-stable code tilix flatpak npm
+sudo dnf install -y git zsh google-chrome-stable code tilix flatpak npm fd-find
 
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
