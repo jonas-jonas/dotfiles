@@ -33,9 +33,8 @@ sudo unzip -qq /tmp/dart-sdk.zip -d /usr/lib/
 sudo chmod -R 755 /usr/lib/dart-sdk/
 rm -f /tmp/dart-sdk.zip
 
-# Setup symlinks to dart executables
-# TODO!
-
+# Setup symlinks to dart executables and hide the (error) output
+sudo cp -s /usr/lib/dart-sdk/bin/* /usr/bin > /dev/null
 
 # Enable flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
